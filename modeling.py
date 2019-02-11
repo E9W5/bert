@@ -718,6 +718,8 @@ def attention_layer(from_tensor,
   # Normalize the attention scores to probabilities.
   # `attention_probs` = [B, N, F, T]
   attention_probs = tf.nn.softmax(attention_scores)
+  
+  print(attention_probs)
 
   # This is actually dropping out entire tokens to attend to, which might
   # seem a bit unusual, but is taken from the original Transformer paper.
